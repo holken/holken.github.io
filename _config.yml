@@ -1,0 +1,29 @@
+permalink: /posts/:title
+markdown: kramdown
+  
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+name: KTH
+url: sholk.github.io
+enforce_ssl: sholk.github.io
+description: Simon Holk's personal website
+
+collections:
+  ml:
+    output: true
+  math:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: ml
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: math
+    values:
+      layout: post

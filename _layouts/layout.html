@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+
+    <nav id="menu" class="menu">
+      <header>
+        <section class="menu-section">
+          <h3 class="menu-section-title">Menu</h3>
+          <ul class="menu-section-list">
+              <li><a class="page-link" href="{{site.github.url}}/">About</a>
+             <li><a class="page-link" href="{{site.github.url}}/research">Research</a></li>
+              <!-- <li><a class="page-link" href="{{site.github.url}}/talks"> Talks </a></li> -->
+              <li><a class="page-link" href="{{site.github.url}}"> CV (todo add)</a></li>
+          </ul>
+        </section>
+      </header>
+    </nav>
+
+
+    <main id="panel">
+      <div class="page-content">
+        <div class="wrapper container">
+          <header>
+            <nav class="site-header">
+              <div class="row">
+                <div class="menu-toggle"><button class="toggle-button"><i class="icon fa fa-bars"></i></button></div>
+
+                <div class="site-title"><a href="/">Simon Holk</a></div>
+
+              </div>
+              <div class="desktop-menu">
+                <ul>
+                    <li><a href="{{site.github.url}}/"> About </a></li>
+                    <li><a href="{{site.github.url}}/research"> Research</a></li>
+                    <!-- <li><a href="{{site.github.url}}/talks"> Talks </a></li> -->
+                    <li><a href="{{site.github.url}}"> CV (todo add) </a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+
+
+          {{content}}
+
+        </div>
+
+      </div>
+
+      <div class="invisible-divider"></div>
+      <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="force seven columns">
+        <ul class="contact-list">
+          <li class="social-links">
+            <!-- <a href="https://twitter.com/daniel" target="_blank">
+              <i class="fa fa-twitter fa-10x" style="color:#00ACEE"></i> daniel
+            </a> -->
+            <a href="https://github.com/holken/" style="color:#211F1F" target="_blank">
+                <i class="fa fa-github fa-10x" style="color:#211F1F"> </i> holken
+            </a>
+            <a href="https://www.linkedin.com/in/simonholk/" target="_blank">
+              <i class="fa fa-linkedin fa-10x" style="color:#0e76a8"> </i> holk
+            </a>
+            <a href="https://scholar.google.com/citations?user=etBgLN4AAAAJ&hl=en" target="_blank">
+              <i class="ai ai-google-scholar ai-10x" style="color:#0e76a8"> </i> simonholk
+            </a>
+            <a href="https://twitter.com/S_Holk" target="_blank">
+              <i class="fa fa-twitter fa-10x" style="color:#0e76a8"> </i> s_holk
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="force five columns">
+        <p class="site-description">
+          <a href="mailto:dlmarta@kth.se" style="color:#211F1F">sholk (at) kth (dot) se</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </main>
+
+  </body>
+
+</html>
