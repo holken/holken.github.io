@@ -5,10 +5,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
-name: KTH
-url: sholk.github.io
-enforce_ssl: sholk.github.io
-description: Simon Holk's personal website
+name: Simon Holk
+url: https://holken.github.io
+enforce_ssl: holken.github.io
+description: Simon Holk — robotics researcher working on robot learning, vision-language-action models, reinforcement learning, and multimodal data quality.
 
 collections:
   ml:

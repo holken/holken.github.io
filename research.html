@@ -1,150 +1,141 @@
 ---
 layout: layout
-title: "Research Overview"
+title: "Research"
 ---
 
-<center>  
-  Here's my <a href="https://scholar.google.com/citations?user=etBgLN4AAAAJ&hl=en">Google Scholar</a>. <br>
-  Jump to <a href='#publications'> selected publications</a>.
-</center>
-
-<div class="divider"></div>
-
-<h2 id='publications' class="page-heading"> Selected Publications</h1>
-
-<div class="row">
-
-  <div class="row">
-    <div class="six columns">
-      <img style="margin-top:0em" src="/images/research/LLMpolite.png">
-      <table>
-        <tr>          
-          <td><a href="https://arxiv.org/abs/2402.15420">arXiv</a></td> 
-          <td><a href="https://dl.acm.org/doi/10.1145/3610977.3634970">HRI conference</a></td>
-        </tr>
-      </table>
-    </div>
-  
-    <div class="six columns">
-  
-      <b> PREDILECT: Preferences Delineated with Zero-Shot Language-based Reasoning in Reinforcement Learning </b>
-      <p> <b>Simon Holk*</b>, Daniel Marta*, and Iolanda Leite <br />
-      HRI'24 </p>
-    <p> This paper aims to utilize the zero-shot capabilities of LLM in order to increase the granularity
-      of preference-based feedback by extending my previous work. By letting the user give optional auxiliary
-      textual descriptions of their preference we ensure that the reward function align with what the human
-      actually wants as well as improve the sample-efficiency by avoiding over-sampling.
-    </p>
-    </div>
-  </div>
-  
-  <div class="divider"></div>
-
-
-<div class="row">
-  <div class="six columns">
-    <img style="margin-top:0em" src="/images/research/POLITE1.png">
-    <table>
-      <tr>          
-        <td><a href="https://holken.github.io/research">To-be-added</a></td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="six columns">
-
-    <b> POLITE: Preferences Combined with Highlights in Reinforcement Learning </b>
-    <p> <b>Simon Holk</b>, Daniel Marta, and Iolanda Leite <br />
-    ICRA'24 - <b>Nominated for best HRI paper, best student paper, and best conference paper.</b></p>
-  <p> This paper aims to improve the granularity of preference-based feedback by adding temporal trajectory segmentation
-    to highlight positive and negative parts. This helps avoid the uniform assignment of responsibility across the whole trajectory
-    while it might just be some part that was actually preferred. The highlights are then optimized as an auxiliary task ensuring
-    a improved shared representation.
+<section class="research-header">
+  <p class="eyebrow">SELECTED PUBLICATIONS &amp; PREPRINTS</p>
+  <h1>Research</h1>
+  <p>
+    My research connects preference-based reinforcement learning, multimodal robot-data quality,
+    vision-language-action models, and physical deployment. The common question is how robots can
+    learn from imperfect human-provided data while preserving the behavioral distinctions that
+    matter in the real world.
   </p>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<div class="row">
-  <div class="six columns">
-    <img style="margin-top:0em" src="/images/research/Sequelframework.png">
-    <table>
-      <tr>          
-        <td><a href="https://holken.github.io/research">To-be-added</a></td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="six columns">
-
-    <b> SEQUEL: Semi-Supervised Preference-based RL with Query Synthesis via Latent Interpolation</b>
-    <p> Daniel Marta*, <b>Simon Holk*</b>, Christian Pek, Jana Tumova, and Iolanda Leite <br />
-    ICRA'24 </p>
-  <p> By utilizing semi-supervised learning we can improve the sample-efficiency by augmenting the preferences provided by humans.
-    We train a VAE to learn a latent representation and thereafter synthesise new queries from existing ones by interpolating the
-    trajectory pairs. The idea is that if a user prefers traj A over traj B, even if they are a bit closer (like 10%) they would
-    still prefer it. This helps the feedback generalize better.
+  <p>
+    Complete citation history is available on
+    <a href="https://scholar.google.com/citations?user=etBgLN4AAAAJ&hl=en">Google Scholar</a>.
+    <strong>* Equal contribution.</strong>
   </p>
-  </div>
-</div>
+</section>
 
-<div class="divider"></div>
-  <div class="row">
-    <div class="six columns">
-      <img style="margin-top:0em" src="/images/research/iros23.png">
-      <table>
-        <tr>          
-          <td><a href="https://www.diva-portal.org/smash/get/diva2:1787953/FULLTEXT01.pdf">DiVA</a></td>
-        </tr>
-      </table>
+<section id="publications" class="publication-list">
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/auditing_itm_overview.png" alt="Overview of multimodal auditing for instruction-trajectory mismatches">
     </div>
-
-    <div class="six columns">
-
-      <b> VARIQuery: VAE Segment-based Active Learning for Query Selection in Preference-based Reinforcement Learning </b>
-      <p> Daniel Marta*, <b>Simon Holk*</b>, Christian Pek, Jana Tumova, and Iolanda Leite <br />
-      IROS'23 </p>
-    <p> This paper addresses the
-      often-overlooked aspect of query selection, which is closely
-      related to active learning (AL). We propose a novel query
-      selection approach that leverages variational autoencoder (VAE)
-      representations of state sequences. In this manner, we formulate
-      queries that are diverse in nature while simultaneously taking
-      into account reward model estimations.
-    </p>
+    <div class="publication-copy">
+      <span class="venue-badge">IEEE RA-L · 2026</span>
+      <h2>Auditing Instruction–Trajectory Mismatches in Multimodal Robot Demonstrations</h2>
+      <p class="authors"><strong>Simon Holk</strong>, Ryosuke Takanami, Tatsuya Matsushima, Yusuke Iwasawa, Yutaka Matsuo, Yueh-Hua Wu, and Kei Ota</p>
+      <p>
+        We study demonstrations that execute plausible behavior but are paired with the wrong language
+        instruction. Multimodal Probabilistic Fusion is a training-free auditing method that combines
+        vision and proprioceptive evidence to detect and relabel these mismatches before VLA training.
+      </p>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2608.07895">arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.07895">PDF</a>
+      </div>
     </div>
-  </div>
-</div>
+  </article>
 
-<div class="divider"></div>
-
-
-  <div class="row">
-    <div class="six columns">
-      <img style="margin-top:0em" src="/images/research/icra23.png">
-      <table>
-        <tr>          
-          <td><a href="https://www.diva-portal.org/smash/get/diva2:1744884/FULLTEXT01.pdf">DiVA</a></td>
-        </tr>
-      </table>
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/ragdp_overview.png" alt="RAGDP speed and accuracy results for diffusion policies">
     </div>
-
-    <div class="six columns">
-
-      <b> Aligning Human Preferences with Baseline Objectives in Reinforcement Learning </b>
-      <p> Daniel Marta, <b>Simon Holk</b>, Christian Pek, Jana Tumova, and Iolanda Leite <br />
-      ICRA'23 </p>
-    <p> By considering baseline objectives to be designed
-      beforehand, we are able to narrow down the policy space, solely
-      requesting human attention when their input matters the most.
-      To allow for control over the optimization of different objectives,
-      our approach contemplates a multi-objective setting. We achieve
-      human-compliant policies by sequentially training an optimal
-      policy from a baseline specification and collecting queries on
-      pairs of trajectories. 
-    </p>
+    <div class="publication-copy">
+      <span class="venue-badge preprint">arXiv preprint · 2025</span>
+      <h2>Retrieve-Augmented Generation for Speeding up Diffusion Policy without Additional Training</h2>
+      <p class="authors">Sodtavilan Odonchimed, Tatsuya Matsushima, <strong>Simon Holk</strong>, Yusuke Iwasawa, and Yutaka Matsuo</p>
+      <p>
+        RAGDP retrieves relevant expert actions and injects them into an intermediate denoising step,
+        improving the speed–accuracy trade-off of pretrained diffusion policies without distillation
+        or additional model training.
+      </p>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2507.21452">arXiv</a>
+        <a href="https://arxiv.org/pdf/2507.21452">PDF</a>
+      </div>
     </div>
-  </div>
+  </article>
 
-</div>
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/FLORAdiagram.png" alt="FLoRA low-rank reward-function style adaptation">
+    </div>
+    <div class="publication-copy">
+      <span class="venue-badge">ICRA · 2025</span>
+      <h2>FLoRA: Sample-Efficient Preference-based RL via Low-Rank Style Adaptation of Reward Functions</h2>
+      <p class="authors">Daniel Marta*, <strong>Simon Holk*</strong>, Miguel Vasco, Jens Lundell, Timon Homberger, Finn Busch, Olov Andersson, Danica Kragic, and Iolanda Leite</p>
+      <p>
+        FLoRA adapts pretrained robot behavior to individual preferences through low-rank style
+        parameters in the reward function, reducing the amount of new feedback needed while retaining
+        the original task behavior.
+      </p>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2504.10002">arXiv</a>
+        <a href="https://ieeexplore.ieee.org/document/11127633">IEEE</a>
+        <a href="https://sites.google.com/view/preflora/">Project</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/LLMpolite.png" alt="PREDILECT language-enhanced preference learning overview">
+    </div>
+    <div class="publication-copy">
+      <span class="venue-badge">HRI · 2024</span>
+      <h2>PREDILECT: Preferences Delineated with Zero-Shot Language-based Reasoning in Reinforcement Learning</h2>
+      <p class="authors"><strong>Simon Holk*</strong>, Daniel Marta*, and Iolanda Leite</p>
+      <p>
+        PREDILECT uses zero-shot language reasoning to extract more granular information from optional
+        natural-language explanations accompanying pairwise preferences, improving how reward models
+        represent what a person actually wants.
+      </p>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2402.15420">arXiv</a>
+        <a href="https://dl.acm.org/doi/10.1145/3610977.3634970">ACM</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/POLITE1.png" alt="POLITE preference and temporal-highlight learning architecture">
+    </div>
+    <div class="publication-copy">
+      <span class="venue-badge">ICRA · 2024</span>
+      <h2>POLITE: Preferences Combined with Highlights in Reinforcement Learning</h2>
+      <p class="authors"><strong>Simon Holk</strong>, Daniel Marta, and Iolanda Leite</p>
+      <p>
+        POLITE supplements trajectory preferences with positive and negative temporal highlights so a
+        reward model can assign credit to the behavior that actually caused the judgment. The paper was
+        nominated for three ICRA best-paper awards.
+      </p>
+      <div class="paper-links">
+        <a href="https://ieeexplore.ieee.org/document/10610505/">IEEE</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="publication-card">
+    <div class="publication-visual">
+      <img src="/images/research/Sequelframework.png" alt="SEQUEL semi-supervised query-synthesis framework">
+    </div>
+    <div class="publication-copy">
+      <span class="venue-badge">ICRA · 2024</span>
+      <h2>SEQUEL: Semi-Supervised Preference-based RL with Query Synthesis via Latent Interpolation</h2>
+      <p class="authors">Daniel Marta*, <strong>Simon Holk*</strong>, Christian Pek, and Iolanda Leite</p>
+      <p>
+        SEQUEL learns a latent representation of trajectory pairs and synthesizes additional preference
+        queries through interpolation, using semi-supervised learning to extract more value from limited
+        human feedback.
+      </p>
+      <div class="paper-links">
+        <a href="https://ieeexplore.ieee.org/document/10610534/">IEEE</a>
+      </div>
+    </div>
+  </article>
+</section>
